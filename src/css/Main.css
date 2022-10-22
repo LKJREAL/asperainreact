@@ -1,0 +1,190 @@
+.mybuttonWrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: auto;
+}
+.mybutton {
+    /* width: 140px; */
+    width: auto;
+    height: 51px;
+    /* UI Properties */
+    background-color: #baf19e;
+    border: 2px solid #fafcf9;
+    border-radius: 10px;
+    
+    line-height: 51px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 20px;
+    font-weight: 700;
+    /*  */
+    /* overflow: hidden; */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.mybutton ~ .mybutton {
+    margin-left: 20px;
+}
+.mybutton:hover{
+    background-color: #6969E8;
+    color: white;
+}
+.button_font{
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.mybuttonRed {
+    /* width: 140px; */
+    height: 51px;
+    /* UI Properties */
+    background-color: #fa38e0;
+}
+.mybuttonRed:hover{
+    background-color: #fa0505;
+    color: white;
+}
+
+
+.mybuttonYellow {
+    /* width: 140px; */
+    height: 51px;
+    /* UI Properties */
+    background-color: yellow; /*#87ef83;*/
+}
+.mybuttonYellow:hover{
+    background-color: #6969E8;
+    color: white;
+}
+
+.menuBar {
+   width: 27px;
+   background: #6969E8;
+   height: 3px;
+   position: relative;
+}
+.menuBar::after,.menuBar::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 27px;
+    background: #6969E8;
+    height: 3px;
+    left: 0;
+}
+.menuBar::after {
+    bottom: 8px;
+}
+.menuBar::before {
+    top: 8px;
+}
+.tableTitle {
+    font-size: 26px;
+    font-weight: 600;
+    color: #6969E8;
+    margin-left: 10px;
+
+}
+.sch_bar {
+    padding: 5px; 
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    height: auto;
+
+}
+.sch_bar input {
+    border: none;
+    height: 100%;
+    background: transparent;
+    padding-left: 0;
+    width: calc(100% - 48px - 32px);
+    /* 커서 깜빡임 위치 관련css  */
+    /*padding: ;*/
+    /*text-indent: 17px;*/
+    text-indent:10px !important;
+    font-size: 20px;
+}
+.arrowBox {
+    background: #6969E8;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.filterIcon {
+    margin-top: 9px;
+    margin-left: 5px;
+    width: 27px !important;
+}
+.mytableWrap {
+    width: 100%;
+    height: calc(100% - 30px );
+    overflow: auto;
+}
+.mytable {
+    min-width: 1349px;
+}
+.paging {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.paging > ul {
+    background: #6969E8;
+    display: flex;
+    width: auto;
+}
+.paging > ul > li {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ddd;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #333;
+}
+.paging > ul > li > span {
+    font-size: 16px;
+}
+.paging > ul > li:hover, .paging > ul > li.active {
+    background: #6969E8;
+    color: #fff;
+    border: 1px solid transparent;
+    
+}
+
+.arrow {
+    display: block;
+    width: 8px;
+    height: 8px;
+    transform: rotate(-45deg);
+    border-color: #333;
+}
+.arrow_prev {
+    border-top: 2px solid ;
+    border-left: 2px solid ;
+}
+.arrow_next {
+    border-bottom: 2px solid;
+    border-right: 2px solid ;
+}
+.paging > ul > li:hover .arrow {
+    border-color: #fff;
+
+}

@@ -10,7 +10,8 @@ let statusEventListener;
 function asperaReady() {
   connect = new Connect();
   // const options = {};
-  options = { sdkLocation: "//192.168.0.12:3000/abc" };
+  // options = { sdkLocation: "//192.168.0.12:3000/abc" };
+  options = { sdkLocation: "//192.168.0.12:1234" };
   connectInstaller = new ConnectInstaller(options);
 
   statusEventListener = function (eventType, data) {
@@ -39,6 +40,7 @@ function asperaReady() {
       data === Connect.STATUS.RUNNING
     ) {
       connectInstaller.connected();
+      alert("Aspera Transfer Mudule is READY!!!");
     }
   };
 
@@ -56,7 +58,7 @@ function asperaReady() {
 }
 
 // function testAspera(connect) { parameter 로 넘기는 방식
-function testAspera() {
+function testAspera(eventType, data) {
   const transferSpec = {
     paths: [
       {
@@ -85,13 +87,19 @@ function testAspera() {
     },
   };
 
+  /* if (Connect.STATUS.RUNNING) {
+    //alert("You can Transfer Files because Aspera is Ready");
+    connect.startTransferPromise(transferSpec, connectSpec, transferCallback);
+  } else if (alert("Aspera in NOT Ready! Click [Aspera Ready] First!!! "));
+  */
+
   connect.startTransferPromise(transferSpec, connectSpec, transferCallback);
 }
 
 function App() {
   return (
     <div className="App">
-      <input type="button" value={"Init"} onClick={asperaReady} />
+      <input type="Button" value={"Aspera Ready"} onClick={asperaReady} />
       <input type="button" value={"Transfer Test"} onClick={testAspera} />
     </div>
   );
